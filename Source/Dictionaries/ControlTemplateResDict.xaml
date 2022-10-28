@@ -1,8 +1,8 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    
-    
+
+
     <ControlTemplate x:Key="EllipseButton" TargetType="Button">
         <Grid>
             <Ellipse Height="100" Width="100">
@@ -18,8 +18,81 @@
             <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"></ContentPresenter>
         </Grid>
     </ControlTemplate>
-    
-    
-    
+
+
+
+
+
+
+    <ControlTemplate x:Key="CustomProgressBar" TargetType="ProgressBar">
+        <Grid Width="300">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border 
+                Grid.Column="0"
+                Width="50"
+                Height="50"
+                CornerRadius="50"
+                BorderBrush="Bisque"
+                BorderThickness="5">
+
+                <TextBlock
+                    Text="{Binding ElementName=prog, Path=Minimum}"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontWeight="Medium"
+                    FontFamily="Comic Sans Ms">
+                </TextBlock>
+            </Border>
+
+
+            <ProgressBar 
+                Grid.Column="1"
+                Value="{TemplateBinding Value}"
+                Minimum="{TemplateBinding Minimum}"
+                Maximum="{TemplateBinding Maximum}"
+                BorderThickness="0"
+                Width="150"
+                Height="50"
+                Name="prog">
+            </ProgressBar>
+
+
+            <TextBlock
+                    Grid.Column="1"
+                    Text="{Binding ElementName=prog, Path=Value}"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontWeight="Medium"
+                    FontSize="22"
+                    Foreground="Black"
+                    FontFamily="Comic Sans Ms">
+            </TextBlock>
+
+
+            <Border 
+                Grid.Column="2"
+                Width="50"
+                Height="50"
+                CornerRadius="50"
+                BorderBrush="Bisque"
+                BorderThickness="5">
+
+                <TextBlock
+                    Text="{Binding ElementName=prog, Path=Maximum}"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontWeight="Medium"
+                    FontFamily="Comic Sans Ms">
+                </TextBlock>
+            </Border>
+        </Grid>
+    </ControlTemplate>
+
+
 
 </ResourceDictionary>
