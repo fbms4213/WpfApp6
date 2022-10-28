@@ -1,0 +1,38 @@
+﻿<Window x:Class="Source.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Source.Views"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <!--<StackPanel>
+            <TextBlock FontSize="42" Text="{Binding RelativeSource={RelativeSource Self}, Path=FontSize}"></TextBlock>
+            <TextBlock Name="txtBlock" FontSize="42" Text="{Binding RelativeSource={RelativeSource Self}, Path=Name}"></TextBlock>
+            <TextBlock  FontSize="42" Text="{Binding RelativeSource={RelativeSource Self}}"></TextBlock>
+            <TextBlock Foreground="CadetBlue" FontSize="42" Text="{Binding RelativeSource={RelativeSource Self}, Path=Foreground}"></TextBlock>
+        </StackPanel>-->
+
+
+
+        <!--<StackPanel Name="sp1">
+            <StackPanel Name="sp2">
+                <TextBlock FontSize="42" Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type StackPanel}, AncestorLevel=2}, Path=Name}"></TextBlock>
+            </StackPanel>
+        </StackPanel>-->
+
+
+
+        
+        
+
+        <StackPanel>
+            <Button Template="{StaticResource EllipseButton}">Matata1</Button>
+            <Button Template="{StaticResource EllipseButton}">Matata2</Button>
+            <Button Template="{StaticResource EllipseButton}">Matata3</Button>
+        </StackPanel>
+
+
+    </Grid>
+</Window>
