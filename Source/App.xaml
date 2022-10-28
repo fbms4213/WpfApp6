@@ -5,7 +5,15 @@
              StartupUri="Views/MainWindow.xaml">
     <Application.Resources>
 
-        <ResourceDictionary Source="Dictionaries/ControlTemplateResDict.xaml"></ResourceDictionary>
-        
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                
+                <ResourceDictionary Source="Dictionaries/ControlTemplateResDict.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Dictionaries/CustomStyleResDict.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Dictionaries/CustomButtonResDict.xaml"></ResourceDictionary>
+
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
     </Application.Resources>
 </Application>
